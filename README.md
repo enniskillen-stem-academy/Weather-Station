@@ -21,8 +21,8 @@ This project simulates a basic weather station that generates and displays weath
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/weather-station-stem.git
-   cd weather-station-stem
+   git clone https://github.com/enniskillen-stem-academy/Weather-Station.git
+   cd Weather-Station
 2. **Install the required dependencies: If matplotlib is not installed, install it using pip:**
     ```bash
     pip install matplotlib
