@@ -23,13 +23,12 @@ This project simulates a basic weather station that generates and displays weath
    ```bash
    git clone https://github.com/enniskillen-stem-academy/Weather-Station.git
    cd Weather-Station
-2. **Install the required dependencies: If matplotlib is not installed, install it using pip:**
+2. **Install the required dependencies: If matplotlib is not installed, install it using brew:**
     ```bash
-    pip install matplotlib
+    brew install python-matplotlib
 3. **Optional: If you're using Homebrew on macOS, you might need to install python-tk to support matplotlib:**
     ```bash
     brew install python-tk
-
 ## Usage
 - Run the main script:
     ```bash
