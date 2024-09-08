@@ -23,10 +23,24 @@ This project simulates a basic weather station that generates and displays weath
    ```bash
    git clone https://github.com/enniskillen-stem-academy/Weather-Station.git
    cd Weather-Station
-2. **Install the required dependencies: If matplotlib is not installed, install it using brew:**
+2. **Set Up a Virtual Environment**
+    - It’s important to create a virtual environment to ensure all dependencies are installed in an isolated environment.
+    - Create a Virtual Environment: Run the following command to create a virtual environment named venv:
+
+    ```bash 
+    python3 -m venv venv
+    ```
+    -   Activate the Virtual Environment:
     ```bash
-    brew install python-matplotlib
-3. **Optional: If you're using Homebrew on macOS, you might need to install python-tk to support matplotlib:**
+    source venv/bin/activate
+    ```
+    - You should now see the virtual environment activated in your terminal. The terminal prompt will change to show (venv).
+
+
+3. **Install the required dependencies:**
+    ```bash
+    pip3 install -r requirements.txt
+4. **Optional: If you're using Homebrew on macOS, you might need to install python-tk to support matplotlib:**
     ```bash
     brew install python-tk
 ## Usage
@@ -36,34 +50,12 @@ This project simulates a basic weather station that generates and displays weath
 This will generate and display random weather data (temperature, humidity, and wind speed) every 5 seconds.
 - Visualizing Data (Optional): To visualize the collected data on a graph, ensure matplotlib is installed, and run the script:
     ```bash 
-    python weather_station_with_plot.py
+    python3 weather_station_with_plot.py
 This will generate and display a graph showing changes in temperature, humidity, and wind speed over time.
 
-## Code Snippets
-### Simulating Weather Data
+**Closing the project**
+- When you're done working, remember to close the virtual environment
 
-```python
-import random
-
-def generate_weather_data():
-    temperature = round(random.uniform(10.0, 30.0), 1)
-    humidity = round(random.uniform(30.0, 80.0), 1)
-    wind_speed = round(random.uniform(0.0, 15.0), 1)
-    return temperature, humidity, wind_speed
-```
-### Plotting Weather Data
-
-```python
-import matplotlib.pyplot as plt
-
-temperatures = [22.4, 21.1, 23.6, 24.0, 25.1]
-humidities = [60.5, 55.0, 50.0, 53.2, 56.4]
-wind_speeds = [5.4, 4.2, 6.1, 7.0, 6.3]
-
-plt.plot(temperatures, label="Temperature (°C)")
-plt.plot(humidities, label="Humidity (%)")
-plt.plot(wind_speeds, label="Wind Speed (m/s)")
-plt.legend()
-plt.show()
-
-```
+    ```bash
+    deactivate
+    ```
